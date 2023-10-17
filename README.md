@@ -11,11 +11,14 @@ The project consists of the following sections:
 ## Problem Description
 The main objective in this problem is to predict whether a passenger will survive to the titanic catastrophe based on certain features. The submission file should most be a two column data set, one containing the passenger ID (sorted in any way) and the other column must have 1 or 0, depending on if the passenger dont survived 0 and 1 if the passenger survived.
 The features are the following: 
+
 1.
+2.
+3.
 ## The approach
 This project make use of feature engineering, und because of thath I constructed 4 data category each one with specific alterations to their features. After data preprocessing the categories are the following:
 * Category 0: Remain unchanged (original).
-* Category 1: "TRelatives" column created, which is the sum of sibsp and parch (total relatives). Sibps and parch columns were deleted.
+* Category 1: "TRelatives" column created, which is the sum of sibsp and parch columns (total relatives). Sibps and parch columns were deleted.
 * Category 2: Age and Fare columns are normalized.
 * Category 3: A combination of category 1 and 2.
 
@@ -36,4 +39,4 @@ In the image below, accuracies corresponding to each of the machine learning mod
 
 Now considering a stratified sampling using "StratifiedShuffleSplit()" function. The results of the accuracies appear to reduced. This method was considered due to the task of classfication, that means it is important to have representative data in both training and testing sets.
 
-![Accuracy for each data category, considering normal splitting](images/models_sts.png)
+![Accuracy for each data category, considering stratified splitting](images/model_sts.png)
