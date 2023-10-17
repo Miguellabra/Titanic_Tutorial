@@ -18,6 +18,7 @@ This project make use of feature engineering, und because of thath I constructed
 * Category 1: New column created; the sum of sibsp and parch consider as total relatives column, "TRelatives".
 * Category 2: Age and Fare columns are normalized.
 * Category 3: A combination of category 1 and 2.
+
 After creating the 4 different data categories, these data sets are proccesed by different algorithms:
 * LR: Logistic Regression.
 * DTC: Desicion Tree Classifier.
