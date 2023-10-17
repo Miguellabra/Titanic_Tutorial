@@ -8,5 +8,5 @@ The project consists the following sections:
 * Data preprocessing.
 * Feature engineering.
 * Model Selection.
-### Problem Description
+## Problem Description
 The main objective in this problem is to predict whether a passenger will survive to the titanic catastrophe based on some features like sex, age, cabin, among others.
