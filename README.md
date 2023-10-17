@@ -24,7 +24,7 @@ The features are the following:
 
 From the features above, I only step aside the columns cabin and ticket this due to the great quantity of missing values in each column. I also don´t consider usefull the columns of name and passengerId. In the next image we can see a histogram of each of the features as a first look of the data. More over, after some data wrangling in the next two images we can see two histograms one to corresponding to the sex and the other to the embarked location in conjuction to the quantiy of people that survived or not.
 
-![Histogram of the features](images/hist.png)
+![Histogram of the features](images/hist.PNG)
 
 ![Histrogram by sex](images/prop_sex.PNG)
 
