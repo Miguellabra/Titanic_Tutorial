@@ -26,9 +26,9 @@ From the features above, I only step aside the columns cabin and ticket this due
 
 ![Histogram of the features](images/hist.png)
 
-![Histrogram by sex](images/prop_sex.png)
+![Histrogram by sex](images/prop_sex.PNG)
 
-![Histogram by embarked](images/prop_embarked.png)
+![Histogram by embarked](images/prop_embarked.PNG)
 ## The approach
 This project make use of feature engineering, und because of thath I constructed 4 data category each one with specific alterations to their features. After data preprocessing the categories are the following:
 * Category 0: Remain unchanged (original).
