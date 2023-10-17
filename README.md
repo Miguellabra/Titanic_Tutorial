@@ -1,5 +1,3 @@
-<p style="text-align: center;">Center-aligned textCenter-aligned textCenter-aligned textCenter-aligned textCenter-aligned textCenter-aligned textCenter-aligned textCenter-aligned textCenter-aligned textCenter-aligned textCenter-aligned textCenter-aligned textCenter-aligned textCenter-aligned textCenter-aligned textCenter-aligned textCenter-aligned textCenter-aligned textCenter-aligned textCenter-aligned textCenter-aligned textCenter-aligned textCenter-aligned textCenter-aligned textCenter-aligned textCenter-aligned textCenter-aligned textCenter-aligned textCenter-aligned textCenter-aligned textCenter-aligned textCenter-aligned textCenter-aligned textCenter-aligned textCenter-aligned text</p>
-
 # Titanic_Tutorial
 This project uses one of Kaggle's most popular datasets to implement and compare various machine learning algorithms. The goal is to select the algorithm with the highest accuracy and then fine-tune the model.
 The project consists of the following sections:
@@ -13,10 +11,24 @@ The project consists of the following sections:
 ## Problem Description
 The main objective in this problem is to predict whether a passenger will survive to the titanic catastrophe based on certain features. The submission file should most be a two column data set, one containing the passenger ID (sorted in any way) and the other column must have 1 or 0, depending on if the passenger dont survived 0 and 1 if the passenger survived.
 The features are the following: 
+* survival: Target
+* pclass: ticket class; 1=1st, 2=2nd and 3=3rd
+* sex
+* age 
+* sibsp: # of siblings/spouses aboard
+* parch: # of parents/children
+* ticket
+* fare
+* cabin
+* embarked: port of embarkation; C = Cherbourg, Q = Queenstown, S = Southampton
 
-1.
-2.
-3.
+From the features above, I only step aside the columns cabin and ticket this due to the great quantity of missing values in each column. I also don´t consider usefull the columns of name and passengerId. In the next image we can see a histogram of each of the features as a first look of the data. More over, after some data wrangling in the next two images we can see two histograms one to corresponding to the sex and the other to the embarked location in conjuction to the quantiy of people that survived or not.
+
+![Accuracy for each data category, considering normal splitting](images/hist.png)
+
+![Accuracy for each data category, considering normal splitting](images/prop_sex.png)
+
+![Accuracy for each data category, considering normal splitting](images/prop_embarked.png)
 ## The approach
 This project make use of feature engineering, und because of thath I constructed 4 data category each one with specific alterations to their features. After data preprocessing the categories are the following:
 * Category 0: Remain unchanged (original).
