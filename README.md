@@ -24,11 +24,11 @@ The features are the following:
 
 From the features above, I only step aside the columns cabin and ticket this due to the great quantity of missing values in each column. I also don´t consider usefull the columns of name and passengerId. In the next image we can see a histogram of each of the features as a first look of the data. More over, after some data wrangling in the next two images we can see two histograms one to corresponding to the sex and the other to the embarked location in conjuction to the quantiy of people that survived or not.
 
-![Accuracy for each data category, considering normal splitting](images/hist.png)
+![Histogram of the features](images/hist.png)
 
-![Accuracy for each data category, considering normal splitting](images/prop_sex.png)
+![Histrogram by sex](images/prop_sex.png)
 
-![Accuracy for each data category, considering normal splitting](images/prop_embarked.png)
+![Histogram by embarked](images/prop_embarked.png)
 ## The approach
 This project make use of feature engineering, und because of thath I constructed 4 data category each one with specific alterations to their features. After data preprocessing the categories are the following:
 * Category 0: Remain unchanged (original).
