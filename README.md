@@ -37,6 +37,6 @@ In the image below, accuracies corresponding to each of the machine learning mod
 
 ![Accuracy for each data category, considering normal splitting](images/models_ss.png)
 
-Now considering a stratified sampling using "StratifiedShuffleSplit()" function. The results of the accuracies appear to reduced. This method was considered due to the task of classfication, that means it is important to have representative data in both training and testing sets.
+Now considering a stratified sampling using "StratifiedShuffleSplit()" function. The results of the accuracies appear to reduced. This method was considered due to the task of classfication, that means it is important to have representative data in both train and test sets. With this method, the best performance was obtained by the logistic regression algorithm in conjuction of the data category 1. 
 
 ![Accuracy for each data category, considering stratified splitting](images/model_sts.png)
