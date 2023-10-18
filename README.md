@@ -30,7 +30,7 @@ From the features above, I only step aside the columns cabin and ticket this due
 
 ![Histogram by embarked](images/prop_embarked.PNG)
 ## The approach
-This project make use of feature engineering, und because of thath I constructed 4 data category each one with specific alterations to their features. After data preprocessing the categories are the following:
+This project make use of **feature engineering**, und because of thath I constructed 4 data category each one with specific alterations to their features. After data preprocessing the categories are the following:
 * Category 0: Remain unchanged (original).
 * Category 1: "TRelatives" column created, which is the sum of sibsp and parch columns (total relatives). Sibps and parch columns were deleted.
 * Category 2: Age and Fare columns are normalized.
@@ -51,10 +51,24 @@ In the image below, accuracies corresponding to each of the machine learning mod
 
 ![Accuracy for each data category, considering normal splitting](images/models_ss.png)
 
-Now considering a stratified sampling using "StratifiedShuffleSplit()" function. The results of the accuracies appear to reduced. This method was considered due to the task of classfication, that means it is important to have representative data in both train and test sets. With this method, the best performance was obtained by the logistic regression algorithm in conjuction of the data category 1. 
+Now considering a **stratified sampling** using "StratifiedShuffleSplit()" function. The results of the accuracies appear to reduced. This method was considered due to the task of classfication, that means it is important to have representative data in both train and test sets. With this method, the best performance was obtained by the logistic regression algorithm in conjuction of the data category 1. 
 
 ![Accuracy for each data category, considering stratified splitting](images/model_sts.png)
 
-Now taking in account the ensemble methods, starting with the voting classifier. I decided to consider the logistic regression, Naive-Bayes and extreme gradient boosting. I test both the soft and hard voting and once again were considered the stratified splitting and the simple splitting. 
+In the context of ensemble methods, I began by using a Voting Classifier. For this ensemble, I chose to include logistic regression, Naive-Bayes, and extreme gradient boosting as my base models. I conducted tests with both soft and hard voting mechanisms, while also exploring two different data splitting strategies: stratified splitting and simple splitting. 
 
-![Accuracy for each data category, considering stratified splitting](images/vc.PNG)
+![Accuracy for each data category, considering stratified splitting](images/vc.png)
+
+In the image above, there is a comparison between soft and hard voting. It's evident that soft voting outperforms hard voting, resulting in a significant improvement in accuracy, reaching an overall accuracy of 86% with simple random splitting. However, my primary focus was on accuracy obtained through stratified splitting. In this case, the highest accuracy was achieved in the data category 0, with an accuracy of 84%. And performing a **cross validation** the accuracys reduced to an accuracy of 82%. 
+
+Continuing with the random forest ensemble, the results are displayed in the image below. It's evident that the highest accuracy of 83% was achieved in data categories 0 and 2, both with simple splitting and after applying the 'StratifiedKFold()' function, which combines cross-validation and stratified splitting to obtain an accuracy of 83%.
+
+
+
+Finally, I opted to use the Random Forest ensemble and data category 2 for making predictions. The process of **tuning the hyperparameters** resulted in the following configuration:
+* n_estimators = 100
+* max_depth = 10
+* min_samples_leaf = 2
+* min_samples_split = 10
+Despite these hyperparameter adjustments, the accuracy remained unchanged. The final accuracy report shows a consistent **83%**.
+
