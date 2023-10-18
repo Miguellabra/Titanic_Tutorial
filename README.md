@@ -54,3 +54,7 @@ In the image below, accuracies corresponding to each of the machine learning mod
 Now considering a stratified sampling using "StratifiedShuffleSplit()" function. The results of the accuracies appear to reduced. This method was considered due to the task of classfication, that means it is important to have representative data in both train and test sets. With this method, the best performance was obtained by the logistic regression algorithm in conjuction of the data category 1. 
 
 ![Accuracy for each data category, considering stratified splitting](images/model_sts.png)
+
+Now taking in account the ensemble methods, starting with the voting classifier. I decided to consider the logistic regression, Naive-Bayes and extreme gradient boosting. I test both the soft and hard voting and once again were considered the stratified splitting and the simple splitting. 
+
+![Accuracy for each data category, considering stratified splitting](images/vc.PNG)
