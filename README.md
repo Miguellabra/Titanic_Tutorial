@@ -57,18 +57,19 @@ Now considering a **stratified sampling** using "StratifiedShuffleSplit()" funct
 
 In the context of ensemble methods, I began by using a Voting Classifier. For this ensemble, I chose to include logistic regression, Naive-Bayes, and extreme gradient boosting as my base models. I conducted tests with both soft and hard voting mechanisms, while also exploring two different data splitting strategies: stratified splitting and simple splitting. 
 
-![Accuracy for each data category, considering stratified splitting](images/vc.png)
+![Voting Classifier results](images/vc.png)
 
 In the image above, there is a comparison between soft and hard voting. It's evident that soft voting outperforms hard voting, resulting in a significant improvement in accuracy, reaching an overall accuracy of 86% with simple random splitting. However, my primary focus was on accuracy obtained through stratified splitting. In this case, the highest accuracy was achieved in the data category 0, with an accuracy of 84%. And performing a **cross validation** the accuracys reduced to an accuracy of 82%. 
 
 Continuing with the random forest ensemble, the results are displayed in the image below. It's evident that the highest accuracy of 83% was achieved in data categories 0 and 2, both with simple splitting and after applying the 'StratifiedKFold()' function, which combines cross-validation and stratified splitting to obtain an accuracy of 83%.
 
-
+![random forest results](images/rf.PNG)
 
 Finally, I opted to use the Random Forest ensemble and data category 2 for making predictions. The process of **tuning the hyperparameters** resulted in the following configuration:
 * n_estimators = 100
 * max_depth = 10
 * min_samples_leaf = 2
 * min_samples_split = 10
+
 Despite these hyperparameter adjustments, the accuracy remained unchanged. The final accuracy report shows a consistent **83%**.
 
